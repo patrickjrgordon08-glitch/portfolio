@@ -70,7 +70,7 @@ export default function AboutPage() {
           <Reveal delay={0.25} className='mt-10 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
-              className='group inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5'
+              className='btn-primary group'
             >
               Get in touch
               <ArrowUpRight className='h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
@@ -78,7 +78,7 @@ export default function AboutPage() {
             <a
               href='/resume.pdf'
               download
-              className='group inline-flex items-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:border-black'
+              className='btn-outline group'
             >
               Download resume
               <Download className='h-4 w-4 transition-transform group-hover:translate-y-0.5' />

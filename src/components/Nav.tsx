@@ -56,7 +56,7 @@ export default function Nav() {
           ))}
           <Link
             href='/contact'
-            className='group inline-flex items-center gap-1.5 rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-transform hover:-translate-y-0.5'
+            className='btn-primary group gap-1.5 px-4 py-2 font-medium'
           >
             Contact
             <ArrowUpRight className='h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
@@ -96,10 +96,10 @@ export default function Nav() {
               <Link
                 href='/contact'
                 onClick={() => setOpen(false)}
-                className='mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-black px-4 py-2 text-sm font-medium text-white'
+                className='btn-primary group mt-2 w-fit gap-1.5 px-4 py-2 font-medium'
               >
                 Contact
-                <ArrowUpRight className='h-3.5 w-3.5' />
+                <ArrowUpRight className='h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
               </Link>
             </div>
           </motion.div>

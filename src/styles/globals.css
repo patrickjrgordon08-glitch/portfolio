@@ -25,6 +25,96 @@
   font-family: var(--font-portfolio-fraunces), Georgia, serif;
 }
 
+/*
+ * Shared button treatments: rounded pills with an accent-colored fill,
+ * lift, and glow on hover. `.btn-primary` is for solid black CTAs,
+ * `.btn-primary-invert` is the same but for buttons that start white
+ * (used on dark sections), and `.btn-outline` is for bordered secondary
+ * CTAs. Per-instance Tailwind utilities (e.g. custom padding) still win
+ * over these defaults thanks to Tailwind's cascade layer ordering.
+ */
+@layer components {
+  .btn-primary,
+  .btn-primary-invert,
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition:
+      background-color 300ms ease,
+      color 300ms ease,
+      border-color 300ms ease,
+      transform 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .btn-primary {
+    background-color: black;
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 32px -12px rgba(181, 96, 63, 0.55);
+  }
+
+  .btn-primary-invert {
+    background-color: white;
+    color: black;
+  }
+  .btn-primary-invert:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 32px -12px rgba(181, 96, 63, 0.55);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #171717;
+    border: 1px solid rgb(0 0 0 / 0.15);
+  }
+  .btn-outline:hover {
+    border-color: transparent;
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 32px -12px rgba(181, 96, 63, 0.55);
+  }
+
+  .btn-primary:active,
+  .btn-primary-invert:active,
+  .btn-outline:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: black;
+    color: white;
+    transition:
+      background-color 300ms ease,
+      transform 300ms ease,
+      box-shadow 300ms ease;
+  }
+  .btn-icon:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 16px 32px -12px rgba(181, 96, 63, 0.55);
+  }
+  .btn-icon:active {
+    transform: scale(0.95);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .portfolio-root *,
   .portfolio-root *::before,

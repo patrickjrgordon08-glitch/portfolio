@@ -19,7 +19,7 @@ export default function CtaBanner() {
         <Reveal delay={0.15}>
           <Link
             href='/contact'
-            className='group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition-transform hover:-translate-y-0.5'
+            className='btn-primary-invert group'
           >
             Start a project
             <ArrowUpRight className='h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />

@@ -103,7 +103,7 @@ export default function Chatbot() {
                       key={prompt}
                       type='button'
                       onClick={() => sendMessage(prompt)}
-                      className='rounded-full border border-black/15 px-3 py-1.5 text-xs font-medium text-neutral-700 transition-colors hover:border-black/40'
+                      className='rounded-full border border-black/15 px-3 py-1.5 text-xs font-medium text-neutral-700 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-transparent hover:bg-[var(--accent)] hover:text-white'
                     >
                       {prompt}
                     </button>
@@ -126,7 +126,7 @@ export default function Chatbot() {
               <button
                 type='submit'
                 aria-label='Send message'
-                className='inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-black text-white transition-transform hover:-translate-y-0.5 disabled:opacity-40'
+                className='btn-icon h-9 w-9 shrink-0 disabled:opacity-40'
                 disabled={!input.trim()}
               >
                 <Send className='h-4 w-4' />
@@ -140,9 +140,8 @@ export default function Chatbot() {
         type='button'
         aria-label={open ? 'Close chat' : 'Open chat'}
         onClick={() => setOpen((v) => !v)}
-        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className='flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-xl'
+        className='btn-icon h-14 w-14 shadow-xl'
       >
         {open ? <X className='h-6 w-6' /> : <MessageCircle className='h-6 w-6' />}
       </motion.button>

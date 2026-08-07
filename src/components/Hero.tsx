@@ -48,14 +48,14 @@ export default function Hero() {
         >
           <Link
             href='/work'
-            className='group inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5'
+            className='btn-primary group'
           >
             View selected work
             <ArrowUpRight className='h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
           </Link>
           <Link
             href='/contact'
-            className='inline-flex items-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold text-neutral-800 transition-colors hover:border-black/40'
+            className='btn-outline group'
           >
             Start a project
           </Link>

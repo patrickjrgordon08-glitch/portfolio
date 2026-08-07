@@ -64,7 +64,7 @@ export default function ContactForm({ defaultBookingUrl }: { defaultBookingUrl: 
           href={bookingUrl}
           target='_blank'
           rel='noopener noreferrer'
-          className='group mt-2 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5'
+          className='btn-primary group mt-2'
         >
           Book a call now
           <ArrowUpRight className='h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
@@ -117,7 +117,7 @@ export default function ContactForm({ defaultBookingUrl }: { defaultBookingUrl: 
       <button
         type='submit'
         disabled={loading}
-        className='group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 disabled:opacity-60'
+        className='btn-primary group mt-2 w-fit disabled:opacity-60'
       >
         {loading ? (
           <>

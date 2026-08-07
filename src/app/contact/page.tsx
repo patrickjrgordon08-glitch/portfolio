@@ -60,7 +60,7 @@ export default async function ContactPage() {
               href={bookingUrl}
               target='_blank'
               rel='noopener noreferrer'
-              className='group inline-flex items-center gap-2 rounded-full border border-black/15 px-5 py-2.5 text-sm font-semibold text-neutral-900 transition-colors hover:border-black'
+              className='btn-outline group px-5 py-2.5'
             >
               {portfolioProfile.calendarCta}
               <ArrowUpRight className='h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
