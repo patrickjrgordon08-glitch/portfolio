@@ -15,6 +15,8 @@ export type Project = {
   outcome: string;
   metrics: { label: string; value: string }[];
   testimonial?: { quote: string; name: string; title: string };
+  liveUrl?: string;
+  previewImage?: string;
 };
 
 export const projects: Project[] = [
@@ -113,6 +115,36 @@ export const projects: Project[] = [
       { label: 'Mobile bounce rate', value: '-33%' },
       { label: 'Average page load time', value: '-44%' },
     ],
+  },
+  {
+    slug: 'barbershop-digital-booking-site',
+    title: 'Designing a modern barbershop site with clear service flows and booking CTAs',
+    client: 'Independent Barbershop',
+    category: 'Frontend & UX Engineering',
+    year: '2026',
+    cover: 'linear-gradient(135deg,#111111,#7c2d12)',
+    accent: '#ea580c',
+    summary:
+      'Built and deployed a branded barbershop marketing site focused on clear service presentation, trust-building visuals, and direct paths to appointment booking.',
+    role: 'Designer-Developer',
+    timeline: '2 weeks',
+    services: ['UI Design', 'Frontend Development', 'Responsive Design', 'Vercel Deployment'],
+    challenge:
+      'The business needed a stronger online presence that quickly communicated services, pricing confidence, and a simple way for visitors to take action.',
+    approach: [
+      'Structured the homepage around the booking journey: hero value proposition, services, social proof, and primary calls-to-action.',
+      'Designed a mobile-first layout with readable typography, high-contrast sections, and touch-friendly navigation elements.',
+      'Optimized page performance and deployment workflow for reliable loading and quick iteration after launch.',
+    ],
+    outcome:
+      'The final site delivered a cleaner brand experience and made it easier for visitors to explore services and move toward booking.',
+    metrics: [
+      { label: 'Status', value: 'Live on Vercel' },
+      { label: 'Primary experience', value: 'Mobile-first' },
+      { label: 'Launch model', value: 'Fast iterative releases' },
+    ],
+    liveUrl: 'https://barbershop-website-kchwmlp13-patrick-gordon.vercel.app/',
+    previewImage: '/projects/barbershop-preview.svg',
   },
 ];
 
