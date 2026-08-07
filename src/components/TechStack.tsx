@@ -1,0 +1,30 @@
+import Reveal from '@/components/Reveal';
+import { portfolioProfile } from '@/libs/portfolioProfile';
+
+export default function TechStack() {
+  return (
+    <section className='bg-white px-6 pt-24 pb-12'>
+      <div className='mx-auto max-w-6xl'>
+        <Reveal>
+          <p className='text-xs font-semibold tracking-widest text-neutral-400 uppercase'>
+            Core stack
+          </p>
+          <h2 className='mt-3 max-w-xl text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl'>
+            Modern tooling, selected for maintainability.
+          </h2>
+        </Reveal>
+
+        <Reveal delay={0.1} className='mt-10 flex flex-wrap gap-3'>
+          {portfolioProfile.techStack.map((tech) => (
+            <span
+              key={tech}
+              className='rounded-full border border-black/15 bg-[#f6f4ef] px-4 py-2 text-sm font-medium text-neutral-700'
+            >
+              {tech}
+            </span>
+          ))}
+        </Reveal>
+      </div>
+    </section>
+  );
+}

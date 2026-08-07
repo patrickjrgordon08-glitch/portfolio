@@ -1,0 +1,37 @@
+/* Global styling for the portfolio site. */
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+:root {
+  --portfolio-background: #f6f4ef;
+  --portfolio-foreground: #171717;
+  --accent: #b5603f;
+}
+
+@theme inline {
+  --font-sans: var(--font-portfolio-inter);
+  --font-display: var(--font-portfolio-fraunces);
+}
+
+.portfolio-root {
+  background: var(--portfolio-background);
+  color: var(--portfolio-foreground);
+  font-family: var(--font-portfolio-inter), Arial, Helvetica, sans-serif;
+}
+
+.portfolio-root h1,
+.portfolio-root h2,
+.portfolio-root h3 {
+  font-family: var(--font-portfolio-fraunces), Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-root *,
+  .portfolio-root *::before,
+  .portfolio-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

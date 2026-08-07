@@ -1,0 +1,35 @@
+export const portfolioProfile = {
+  fullName: 'Patrick Gordon',
+  firstName: 'Patrick',
+  role: 'Front-End Web Developer',
+  metadataTitle: 'Patrick Gordon - Front-End Web Developer',
+  metadataDescription:
+    'I build modern web apps and AI-powered tools that help ideas move from concept to launch faster.',
+  heroEyebrow: 'Product-minded engineering for the modern web.',
+  heroHeadingStart: 'I build digital products that',
+  heroHeadingAccent: 'users actually use.',
+  heroIntro:
+    'I am Patrick Gordon, a front-end developer focused on turning ideas into production-ready products. I ship clean user experiences, practical AI workflows, and scalable web platforms.',
+  aboutHeadline: 'I am Patrick, a developer focused on clarity and performance that ties in with timely outcomes.',
+  techStack: [
+    'JavaScript',
+    'React',
+    'HTML/CSS',
+    'Node.js',
+    'Next.js',
+    'My SQL',
+    'Tailwind CSS',
+  ],
+  responseTime: 'Replies within 1 business day',
+  location: 'Remote - collaborating worldwide',
+  email: 'patrickjrgordon08@gmail.com',
+  calendarUrl: 'https://calendly.com/patrickjrgordon08/30min',
+  calendarCta: 'Book a 30-min intro call',
+  socialLinks: [
+    { label: 'GitHub', href: 'https://github.com/patrickjrgordon08-glitch' },
+    { label: 'LinkedIn', href: '#' },
+    { label: 'X', href: '#' },
+  ],
+  bookingLabel: 'Currently booking new projects',
+  footerTagline: 'Designed and built with intent.',
+} as const;
