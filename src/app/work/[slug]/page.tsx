@@ -157,18 +157,20 @@ export default async function CaseStudyPage({
         </aside>
       </div>
 
-      <div className='border-t border-black/10 bg-white px-6 py-14'>
-        <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
-          <p className='text-sm text-neutral-500'>Next case study</p>
-          <Link
-            href={`/work/${next.slug}`}
-            className='group flex items-center gap-2 text-2xl font-medium tracking-tight text-neutral-950'
-          >
-            {next.title}
-            <ArrowUpRight className='h-6 w-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1' />
-          </Link>
+      {next && (
+        <div className='border-t border-black/10 bg-white px-6 py-14'>
+          <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
+            <p className='text-sm text-neutral-500'>Next case study</p>
+            <Link
+              href={`/work/${next.slug}`}
+              className='group flex items-center gap-2 text-2xl font-medium tracking-tight text-neutral-950'
+            >
+              {next.title}
+              <ArrowUpRight className='h-6 w-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1' />
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </article>
   );
 }
