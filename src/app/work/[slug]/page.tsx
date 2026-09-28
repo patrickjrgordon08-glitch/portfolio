@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Code2 } from 'lucide-react';
 
 import Reveal from '@/components/Reveal';
 import { getAdjacentProjects, getProject, projects } from '@/libs/portfolioProjects';
@@ -147,6 +147,17 @@ export default async function CaseStudyPage({
               ))}
             </div>
           </div>
+          {project.repositoryUrl && (
+            <a
+              href={project.repositoryUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-neutral-800 transition-colors hover:border-black hover:text-black'
+            >
+              View source on GitHub
+              <Code2 className='h-4 w-4' />
+            </a>
+          )}
           <Link
             href='/contact'
             className='btn-primary group w-full px-5'

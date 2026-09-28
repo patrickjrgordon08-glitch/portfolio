@@ -3,7 +3,7 @@
 import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Code2 } from 'lucide-react';
 
 import type { Project } from '@/libs/portfolioProjects';
 
@@ -56,17 +56,32 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         </div>
       </Link>
 
-      {project.liveUrl && (
+      {(project.liveUrl || project.repositoryUrl) && (
         <div className='border-t border-black/10 px-6 py-4'>
-          <a
-            href={project.liveUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='inline-flex items-center gap-2 text-sm font-semibold text-neutral-800 transition-colors hover:text-black'
-          >
-            Visit live site
-            <ArrowUpRight className='h-4 w-4' />
-          </a>
+          <div className='flex flex-wrap gap-x-5 gap-y-2'>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-2 text-sm font-semibold text-neutral-800 transition-colors hover:text-black'
+              >
+                Visit live site
+                <ArrowUpRight className='h-4 w-4' />
+              </a>
+            )}
+            {project.repositoryUrl && (
+              <a
+                href={project.repositoryUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-2 text-sm font-semibold text-neutral-800 transition-colors hover:text-black'
+              >
+                View source
+                <Code2 className='h-4 w-4' />
+              </a>
+            )}
+          </div>
         </div>
       )}
     </motion.article>

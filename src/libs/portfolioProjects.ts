@@ -16,10 +16,40 @@ export type Project = {
   metrics: { label: string; value: string }[];
   testimonial?: { quote: string; name: string; title: string };
   liveUrl?: string;
+  repositoryUrl?: string;
   previewImage?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: 'music-portfolio',
+    title: 'Creating a dedicated portfolio for music and creative work',
+    client: 'Music Portfolio',
+    category: 'Creative Web Development',
+    year: '2026',
+    cover: 'linear-gradient(135deg,#1e1b4b,#7c3aed 52%,#ec4899)',
+    accent: '#8b5cf6',
+    summary:
+      'An in-progress portfolio project focused on giving music and creative work a dedicated home online. The public GitHub repository is ready for the site as it moves from concept into development.',
+    role: 'Designer-Developer',
+    timeline: 'In progress',
+    services: ['Product Direction', 'UI Design', 'Frontend Development'],
+    challenge:
+      'Music projects need a presentation that feels expressive and memorable while keeping the work easy to discover, understand, and revisit across devices.',
+    approach: [
+      'Established a dedicated public repository so the project can be developed and documented independently.',
+      'Defined the project around a focused music portfolio experience rather than mixing creative work into a general-purpose site.',
+      'Planned a responsive foundation that can grow alongside new music, visuals, and project details.',
+    ],
+    outcome:
+      'The project now has a public source-code home and a clear place in the portfolio. Development is ongoing, and the case study can be updated with a live experience and measured results as the project ships.',
+    metrics: [
+      { label: 'Status', value: 'In progress' },
+      { label: 'Repository', value: 'Public' },
+      { label: 'Source', value: 'GitHub' },
+    ],
+    repositoryUrl: 'https://github.com/patrickjrgordon08-glitch/music-protfolio',
+  },
   {
     slug: 'landscaping-business-website',
     title: 'Launching a landscaping business website with quote requests and live chat support',
