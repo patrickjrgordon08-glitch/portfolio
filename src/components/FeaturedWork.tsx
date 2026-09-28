@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 
 export default function FeaturedWork() {
   return (
-    <section id="work" className="bg-white px-6 pt-12 pb-24">
+    <section id="work" className="section-white px-6 pt-12 pb-24">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <Reveal>

@@ -25,7 +25,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-      className='overflow-hidden rounded-2xl border border-black/10 bg-white transition-shadow hover:shadow-xl'
+      className='surface-card overflow-hidden rounded-2xl border border-blue-950/10 transition-shadow hover:shadow-xl'
     >
       <Link
         href={cardHref}

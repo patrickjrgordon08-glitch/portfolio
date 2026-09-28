@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className='mx-auto max-w-4xl'>
           <div className='grid gap-10 sm:grid-cols-[240px_1fr] sm:items-center'>
             <Reveal>
-              <div className='overflow-hidden rounded-2xl border border-black/10 bg-white'>
+              <div className='surface-card overflow-hidden rounded-2xl border border-blue-950/10'>
                 <Image
                   src='/profile.jpg'
                   alt={portfolioProfile.fullName}

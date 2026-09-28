@@ -10,7 +10,7 @@ export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className='relative overflow-hidden bg-[#f6f4ef] px-6 pt-16 pb-20 sm:pt-24'>
+    <section className='section-blue relative overflow-hidden px-6 pt-16 pb-20 sm:pt-24'>
       <div className='mx-auto max-w-6xl'>
         <motion.p
           initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}

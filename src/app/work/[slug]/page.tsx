@@ -94,7 +94,7 @@ export default async function CaseStudyPage({
             </h2>
             <p className='mt-4 leading-relaxed text-neutral-600'>{project.outcome}</p>
 
-            <div className='mt-8 grid grid-cols-3 gap-6 rounded-2xl border border-black/10 bg-white p-6'>
+            <div className='surface-card mt-8 grid grid-cols-3 gap-6 rounded-2xl border border-blue-950/10 p-6'>
               {project.metrics.map((m) => (
                 <div key={m.label}>
                   <p className='text-2xl font-medium tracking-tight text-neutral-950'>
@@ -107,7 +107,7 @@ export default async function CaseStudyPage({
           </Reveal>
 
           {project.testimonial && (
-            <Reveal className='rounded-2xl border border-black/10 bg-[#f6f4ef] p-8'>
+            <Reveal className='rounded-2xl border border-blue-950/10 bg-blue-50/80 p-8'>
               <p className='text-lg leading-relaxed text-neutral-800'>
                 &ldquo;{project.testimonial.quote}&rdquo;
               </p>
@@ -119,7 +119,7 @@ export default async function CaseStudyPage({
           )}
         </div>
 
-        <aside className='h-fit space-y-8 rounded-2xl border border-black/10 bg-white p-6 lg:sticky lg:top-24'>
+        <aside className='surface-card h-fit space-y-8 rounded-2xl border border-blue-950/10 p-6 lg:sticky lg:top-24'>
           <div>
             <p className='text-xs font-semibold tracking-widest text-neutral-400 uppercase'>
               Role
@@ -140,7 +140,7 @@ export default async function CaseStudyPage({
               {project.services.map((s) => (
                 <span
                   key={s}
-                  className='rounded-full bg-[#f6f4ef] px-3 py-1 text-xs font-medium text-neutral-700'
+                  className='rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-neutral-700'
                 >
                   {s}
                 </span>
@@ -169,7 +169,7 @@ export default async function CaseStudyPage({
       </div>
 
       {next && (
-        <div className='border-t border-black/10 bg-white px-6 py-14'>
+        <div className='section-white border-t border-blue-950/10 px-6 py-14'>
           <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
             <p className='text-sm text-neutral-500'>Next case study</p>
             <Link

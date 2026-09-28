@@ -3,7 +3,7 @@ import { portfolioProfile } from '@/libs/portfolioProfile';
 
 export default function TechStack() {
   return (
-    <section className='bg-white px-6 pt-24 pb-12'>
+    <section className='section-white px-6 pt-24 pb-12'>
       <div className='mx-auto max-w-6xl'>
         <Reveal>
           <p className='text-xs font-semibold tracking-widest text-neutral-400 uppercase'>
@@ -18,7 +18,7 @@ export default function TechStack() {
           {portfolioProfile.techStack.map((tech) => (
             <span
               key={tech}
-              className='rounded-full border border-black/15 bg-[#f6f4ef] px-4 py-2 text-sm font-medium text-neutral-700'
+              className='rounded-full border border-blue-950/10 bg-blue-50/80 px-4 py-2 text-sm font-medium text-neutral-700'
             >
               {tech}
             </span>

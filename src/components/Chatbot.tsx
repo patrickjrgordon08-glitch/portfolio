@@ -88,7 +88,7 @@ export default function Chatbot() {
                     className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed ${
                       message.role === 'user'
                         ? 'bg-black text-white'
-                        : 'bg-[#f6f4ef] text-neutral-800'
+                        : 'bg-blue-50 text-neutral-800'
                     }`}
                   >
                     {message.text}
@@ -103,7 +103,7 @@ export default function Chatbot() {
                       key={prompt}
                       type='button'
                       onClick={() => sendMessage(prompt)}
-                      className='rounded-full border border-black/15 px-3 py-1.5 text-xs font-medium text-neutral-700 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-transparent hover:bg-[var(--accent)] hover:text-white'
+                      className='rounded-full border border-black/15 px-3 py-1.5 text-xs font-medium text-neutral-700 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white'
                     >
                       {prompt}
                     </button>

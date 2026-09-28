@@ -27,7 +27,7 @@ export default function Nav() {
   return (
     <header
       className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'border-b border-black/10 bg-[#f6f4ef]/90 backdrop-blur' : 'bg-transparent'
+        scrolled ? 'border-b border-blue-950/10 bg-blue-50/85 backdrop-blur-xl' : 'bg-transparent'
       }`}
     >
       <nav className='mx-auto flex max-w-6xl items-center justify-between px-6 py-5'>
@@ -80,7 +80,7 @@ export default function Nav() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className='overflow-hidden border-t border-black/10 bg-[#f6f4ef] md:hidden'
+            className='overflow-hidden border-t border-blue-950/10 bg-blue-50/95 backdrop-blur-xl md:hidden'
           >
             <div className='flex flex-col gap-4 px-6 py-6'>
               {links.map((link) => (

@@ -6,10 +6,10 @@ import { portfolioProfile } from '@/libs/portfolioProfile';
 
 export default function CtaBanner() {
   return (
-    <section className='bg-black px-6 py-24 text-white'>
+    <section className='section-blue border-y border-blue-950/10 px-6 py-24 text-neutral-950'>
       <div className='mx-auto flex max-w-6xl flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between'>
         <Reveal>
-          <p className='text-xs font-semibold tracking-widest text-white/40 uppercase'>
+          <p className='text-xs font-semibold tracking-widest text-blue-700 uppercase'>
             {portfolioProfile.bookingLabel}
           </p>
           <h2 className='mt-3 max-w-xl text-3xl font-medium tracking-tight sm:text-4xl'>

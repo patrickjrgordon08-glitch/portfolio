@@ -54,7 +54,7 @@ export default function ContactForm({ defaultBookingUrl }: { defaultBookingUrl: 
 
   if (submitted) {
     return (
-      <div className='flex flex-col items-start gap-3 rounded-2xl border border-black/10 bg-white p-8'>
+      <div className='surface-card flex flex-col items-start gap-3 rounded-2xl border border-blue-950/10 p-8'>
         <CheckCircle2 className='h-8 w-8 text-[var(--accent)]' />
         <h3 className='text-xl font-medium text-neutral-950'>Thanks — message received.</h3>
         <p className='text-sm text-neutral-600'>
@@ -76,7 +76,7 @@ export default function ContactForm({ defaultBookingUrl }: { defaultBookingUrl: 
   return (
     <form
       onSubmit={handleSubmit}
-      className='grid gap-5 rounded-2xl border border-black/10 bg-white p-8'
+      className='surface-card grid gap-5 rounded-2xl border border-blue-950/10 p-8'
     >
       <div className='grid gap-5 sm:grid-cols-2'>
         <label className='flex flex-col gap-2 text-sm font-medium text-neutral-700'>
