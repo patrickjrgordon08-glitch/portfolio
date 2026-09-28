@@ -3,7 +3,7 @@ import { portfolioProfile } from '@/libs/portfolioProfile';
 
 export default function TechStack() {
   return (
-    <section className='section-white px-6 pt-24 pb-12'>
+    <section className='section-white px-6 pt-14 pb-8 sm:pt-16 sm:pb-10'>
       <div className='mx-auto max-w-6xl'>
         <Reveal>
           <p className='text-xs font-semibold tracking-widest text-neutral-400 uppercase'>

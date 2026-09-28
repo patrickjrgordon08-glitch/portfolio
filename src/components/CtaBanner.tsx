@@ -6,7 +6,7 @@ import { portfolioProfile } from '@/libs/portfolioProfile';
 
 export default function CtaBanner() {
   return (
-    <section className='section-blue border-y border-blue-950/10 px-6 py-24 text-neutral-950'>
+    <section className='section-blue border-y border-blue-950/10 px-6 py-16 sm:py-20 text-neutral-950'>
       <div className='mx-auto flex max-w-6xl flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between'>
         <Reveal>
           <p className='text-xs font-semibold tracking-widest text-blue-700 uppercase'>
