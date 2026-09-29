@@ -68,6 +68,32 @@
     backdrop-filter: blur(12px);
   }
 
+  .nav-hover-pill {
+    border-radius: 9999px;
+    transition:
+      background-color 300ms ease,
+      color 300ms ease,
+      transform 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .nav-hover-pill:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 32px -12px rgb(15 23 42 / 0.5);
+  }
+
+  .nav-hover-pill:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .dark .nav-hover-pill:hover {
+    background-color: white;
+    color: #0f172a;
+    box-shadow: 0 16px 32px -12px rgb(96 165 250 / 0.3);
+  }
+
   .dark .section-blue {
     background:
       radial-gradient(circle at 85% 15%, rgb(37 99 235 / 0.28), transparent 28rem),
@@ -216,6 +242,10 @@
 .dark .portfolio-root [class*='text-neutral-500'],
 .dark .portfolio-root [class*='text-neutral-400'] {
   color: #91a4bb;
+}
+
+.dark .portfolio-root .nav-hover-pill:hover {
+  color: #0f172a;
 }
 
 .dark .portfolio-root input,

@@ -34,7 +34,10 @@ export default function Nav() {
       }`}
     >
       <nav className='mx-auto flex max-w-6xl items-center justify-between px-6 py-5'>
-        <Link href='/' className='flex items-center gap-2.5 text-sm font-semibold tracking-tight'>
+        <Link
+          href='/'
+          className='nav-hover-pill flex items-center gap-2.5 px-3 py-2 text-sm font-semibold tracking-tight'
+        >
           <Image
             src='/logo.png'
             alt={`${portfolioProfile.fullName} logo`}
@@ -52,7 +55,7 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className='text-sm text-neutral-700 transition-colors hover:text-black dark:text-slate-300 dark:hover:text-white'
+              className='nav-hover-pill px-4 py-2 text-sm text-neutral-700 dark:text-slate-300'
             >
               {link.label}
             </Link>
@@ -92,7 +95,7 @@ export default function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className='text-base font-medium text-neutral-800 dark:text-slate-200'
+                  className='nav-hover-pill -mx-3 px-3 py-2 text-base font-medium text-neutral-800 dark:text-slate-200'
                 >
                   {link.label}
                 </Link>
