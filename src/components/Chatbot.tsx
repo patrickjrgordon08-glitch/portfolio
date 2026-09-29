@@ -61,7 +61,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className='mb-4 flex h-[min(28rem,70vh)] w-[22rem] max-w-[calc(100vw-3rem)] flex-col overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl'
+            className='mb-4 flex h-[min(28rem,70vh)] w-[22rem] max-w-[calc(100vw-3rem)] flex-col overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl dark:border-white/10 dark:bg-slate-900'
           >
             <div className='flex items-center justify-between border-b border-black/10 bg-black px-4 py-3 text-white'>
               <div>
@@ -88,7 +88,7 @@ export default function Chatbot() {
                     className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed ${
                       message.role === 'user'
                         ? 'bg-black text-white'
-                        : 'bg-blue-50 text-neutral-800'
+                        : 'bg-blue-50 text-neutral-800 dark:bg-slate-800 dark:text-slate-100'
                     }`}
                   >
                     {message.text}
@@ -103,7 +103,7 @@ export default function Chatbot() {
                       key={prompt}
                       type='button'
                       onClick={() => sendMessage(prompt)}
-                      className='rounded-full border border-black/15 px-3 py-1.5 text-xs font-medium text-neutral-700 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white'
+                      className='rounded-full border border-black/15 px-3 py-1.5 text-xs font-medium text-neutral-700 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white dark:border-white/20 dark:text-slate-200 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-950'
                     >
                       {prompt}
                     </button>
@@ -114,7 +114,7 @@ export default function Chatbot() {
 
             <form
               onSubmit={handleSubmit}
-              className='flex items-center gap-2 border-t border-black/10 p-3'
+              className='flex items-center gap-2 border-t border-black/10 p-3 dark:border-white/10'
             >
               <input
                 value={input}

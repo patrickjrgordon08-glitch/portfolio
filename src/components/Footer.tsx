@@ -6,7 +6,7 @@ import { portfolioProfile } from '@/libs/portfolioProfile';
 
 export default function Footer() {
   return (
-    <footer className='section-blue border-t border-blue-950/10'>
+    <footer className='section-blue border-t border-blue-950/10 dark:border-white/10'>
       <div className='mx-auto max-w-6xl px-6 py-12 sm:py-14'>
         <div className='grid gap-10 md:grid-cols-[2fr_1fr_1fr]'>
           <div>
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className='mt-12 flex flex-col gap-2 border-t border-black/10 pt-6 text-xs text-neutral-500 sm:flex-row sm:items-center sm:justify-between'>
+        <div className='mt-12 flex flex-col gap-2 border-t border-black/10 pt-6 text-xs text-neutral-500 sm:flex-row sm:items-center sm:justify-between dark:border-white/10'>
           <span>
             &copy; {new Date().getFullYear()} {portfolioProfile.fullName}. All rights reserved.
           </span>

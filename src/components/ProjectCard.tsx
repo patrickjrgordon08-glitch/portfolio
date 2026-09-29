@@ -57,7 +57,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       </Link>
 
       {(project.liveUrl || project.repositoryUrl) && (
-        <div className='border-t border-black/10 px-6 py-4'>
+        <div className='border-t border-black/10 px-6 py-4 dark:border-white/10'>
           <div className='flex flex-wrap gap-x-5 gap-y-2'>
             {project.liveUrl && (
               <a

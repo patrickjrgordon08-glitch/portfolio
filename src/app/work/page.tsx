@@ -35,8 +35,8 @@ export default function WorkPage() {
               onClick={() => setActive(cat)}
               className={`rounded-full border px-4 py-2 text-xs font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 ${
                 active === cat
-                  ? 'border-transparent bg-black text-white'
-                  : 'border-black/15 text-neutral-600 hover:border-black hover:bg-black hover:text-white'
+                  ? 'border-transparent bg-black text-white dark:bg-white dark:text-slate-950'
+                  : 'border-black/15 text-neutral-600 hover:border-black hover:bg-black hover:text-white dark:border-white/20 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-950'
               }`}
             >
               {cat}

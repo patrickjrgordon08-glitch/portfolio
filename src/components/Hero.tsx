@@ -16,7 +16,7 @@ export default function Hero() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className='mb-6 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-4 py-1.5 text-xs font-medium tracking-wide text-neutral-600'
+          className='mb-6 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-4 py-1.5 text-xs font-medium tracking-wide text-neutral-600 dark:border-white/15 dark:bg-white/5'
         >
           {portfolioProfile.heroEyebrow}
         </motion.p>

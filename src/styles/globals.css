@@ -1,11 +1,12 @@
 /* Global styling for the portfolio site. */
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --portfolio-background: #f4f9ff;
+  --portfolio-background: #e8f2ff;
   --portfolio-surface: #ffffff;
-  --portfolio-muted: #eaf4ff;
+  --portfolio-muted: #dcecff;
   --portfolio-foreground: #111827;
   --accent: #2563eb;
 }
@@ -17,12 +18,27 @@
 
 .portfolio-root {
   background:
-    radial-gradient(circle at 8% 4%, rgb(219 234 254 / 0.9), transparent 30rem),
-    radial-gradient(circle at 92% 20%, rgb(224 242 254 / 0.75), transparent 34rem),
-    linear-gradient(145deg, #f8fbff 0%, var(--portfolio-background) 48%, #ffffff 100%);
+    radial-gradient(circle at 8% 4%, rgb(191 219 254 / 0.9), transparent 30rem),
+    radial-gradient(circle at 92% 20%, rgb(186 230 253 / 0.78), transparent 34rem),
+    linear-gradient(145deg, #f4f8ff 0%, var(--portfolio-background) 48%, #ffffff 100%);
   background-attachment: fixed;
   color: var(--portfolio-foreground);
   font-family: var(--font-portfolio-inter), Arial, Helvetica, sans-serif;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+.dark .portfolio-root {
+  --portfolio-background: #071426;
+  --portfolio-surface: #0f1f35;
+  --portfolio-muted: #132a46;
+  --portfolio-foreground: #f8fafc;
+  --accent: #60a5fa;
+  background:
+    radial-gradient(circle at 8% 4%, rgb(30 64 175 / 0.34), transparent 30rem),
+    radial-gradient(circle at 92% 20%, rgb(14 116 144 / 0.22), transparent 34rem),
+    linear-gradient(145deg, #07111f 0%, var(--portfolio-background) 52%, #0b1728 100%);
 }
 
 .portfolio-root h1,
@@ -38,18 +54,34 @@
 @layer components {
   .section-blue {
     background:
-      radial-gradient(circle at 85% 15%, rgb(191 219 254 / 0.65), transparent 28rem),
-      linear-gradient(135deg, #eaf4ff 0%, #f8fbff 55%, #ffffff 100%);
+      radial-gradient(circle at 85% 15%, rgb(147 197 253 / 0.58), transparent 28rem),
+      linear-gradient(135deg, #dcecff 0%, #f3f8ff 55%, #ffffff 100%);
   }
 
   .section-white {
-    background: linear-gradient(135deg, rgb(255 255 255 / 0.96), rgb(239 246 255 / 0.76));
+    background: linear-gradient(135deg, rgb(255 255 255 / 0.96), rgb(219 234 254 / 0.72));
   }
 
   .surface-card {
     background-color: rgb(255 255 255 / 0.88);
     box-shadow: 0 18px 50px -36px rgb(30 64 175 / 0.35);
     backdrop-filter: blur(12px);
+  }
+
+  .dark .section-blue {
+    background:
+      radial-gradient(circle at 85% 15%, rgb(37 99 235 / 0.28), transparent 28rem),
+      linear-gradient(135deg, #0a1b31 0%, #0d1d31 55%, #101b2b 100%);
+  }
+
+  .dark .section-white {
+    background: linear-gradient(135deg, rgb(9 21 38 / 0.98), rgb(15 35 58 / 0.94));
+  }
+
+  .dark .surface-card {
+    background-color: rgb(15 31 53 / 0.88);
+    border-color: rgb(148 163 184 / 0.18);
+    box-shadow: 0 22px 60px -38px rgb(0 0 0 / 0.9);
   }
 
   .btn-primary,
@@ -105,6 +137,31 @@
     box-shadow: 0 16px 32px -12px rgb(15 23 42 / 0.5);
   }
 
+  .dark .btn-primary,
+  .dark .btn-primary-invert {
+    background-color: white;
+    color: #0f172a;
+  }
+
+  .dark .btn-primary:hover,
+  .dark .btn-primary-invert:hover {
+    background-color: #dbeafe;
+    color: #0f172a;
+    box-shadow: 0 16px 32px -12px rgb(96 165 250 / 0.3);
+  }
+
+  .dark .btn-outline {
+    border-color: rgb(255 255 255 / 0.22);
+    color: #f8fafc;
+  }
+
+  .dark .btn-outline:hover {
+    border-color: white;
+    background-color: white;
+    color: #0f172a;
+    box-shadow: 0 16px 32px -12px rgb(0 0 0 / 0.7);
+  }
+
   .btn-primary:active,
   .btn-primary-invert:active,
   .btn-outline:active {
@@ -131,6 +188,46 @@
   .btn-icon:active {
     transform: scale(0.95);
   }
+
+  .dark .btn-icon {
+    background-color: white;
+    color: #0f172a;
+  }
+
+  .dark .btn-icon:hover {
+    background-color: #dbeafe;
+  }
+}
+
+.dark .portfolio-root [class*='text-neutral-950'],
+.dark .portfolio-root [class*='text-neutral-900'] {
+  color: #f8fafc;
+}
+
+.dark .portfolio-root [class*='text-neutral-800'],
+.dark .portfolio-root [class*='text-neutral-700'] {
+  color: #dbe4f0;
+}
+
+.dark .portfolio-root [class*='text-neutral-600'] {
+  color: #bac7d8;
+}
+
+.dark .portfolio-root [class*='text-neutral-500'],
+.dark .portfolio-root [class*='text-neutral-400'] {
+  color: #91a4bb;
+}
+
+.dark .portfolio-root input,
+.dark .portfolio-root textarea {
+  border-color: rgb(255 255 255 / 0.18);
+  background-color: rgb(7 20 38 / 0.72);
+  color: #f8fafc;
+}
+
+.dark .portfolio-root input::placeholder,
+.dark .portfolio-root textarea::placeholder {
+  color: #7890aa;
 }
 
 @media (prefers-reduced-motion: reduce) {

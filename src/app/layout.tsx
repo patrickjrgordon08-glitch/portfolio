@@ -8,6 +8,14 @@ import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import { portfolioProfile } from '@/libs/portfolioProfile';
 
+const themeScript = `
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+  document.documentElement.style.colorScheme = theme;
+`;
+
 const inter = Inter({
   variable: '--font-portfolio-inter',
   subsets: ['latin'],
@@ -35,7 +43,14 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={`${inter.variable} ${fraunces.variable} h-full antialiased`}>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className='portfolio-root flex min-h-full flex-col'>
         <Nav />
         <main className='flex-1'>{children}</main>

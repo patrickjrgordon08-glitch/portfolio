@@ -49,7 +49,7 @@ export const projects: Project[] = [
       { label: 'Service paths', value: '3' },
     ],
     liveUrl: 'https://music-protfolio.vercel.app/',
-    previewImage: '/projects/public/abbey-road-studio2.jpg',
+    previewImage: '/projects/music-portfolio-preview.jpg',
   },
   {
     slug: 'landscaping-business-website',

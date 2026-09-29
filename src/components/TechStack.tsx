@@ -18,7 +18,7 @@ export default function TechStack() {
           {portfolioProfile.techStack.map((tech) => (
             <span
               key={tech}
-              className='rounded-full border border-blue-950/10 bg-blue-50/80 px-4 py-2 text-sm font-medium text-neutral-700'
+              className='rounded-full border border-blue-950/10 bg-blue-50/80 px-4 py-2 text-sm font-medium text-neutral-700 dark:border-white/15 dark:bg-white/5'
             >
               {tech}
             </span>

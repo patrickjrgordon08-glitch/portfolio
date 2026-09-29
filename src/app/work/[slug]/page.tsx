@@ -107,7 +107,7 @@ export default async function CaseStudyPage({
           </Reveal>
 
           {project.testimonial && (
-            <Reveal className='rounded-2xl border border-blue-950/10 bg-blue-50/80 p-8'>
+            <Reveal className='rounded-2xl border border-blue-950/10 bg-blue-50/80 p-8 dark:border-white/15 dark:bg-slate-800/70'>
               <p className='text-lg leading-relaxed text-neutral-800'>
                 &ldquo;{project.testimonial.quote}&rdquo;
               </p>
@@ -140,7 +140,7 @@ export default async function CaseStudyPage({
               {project.services.map((s) => (
                 <span
                   key={s}
-                  className='rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-neutral-700'
+                  className='rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-slate-800'
                 >
                   {s}
                 </span>
@@ -152,7 +152,7 @@ export default async function CaseStudyPage({
               href={project.repositoryUrl}
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-neutral-800 transition-colors hover:border-black hover:text-black'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-neutral-800 transition-colors hover:border-black hover:text-black dark:border-white/20 dark:hover:border-white dark:hover:text-white'
             >
               View source on GitHub
               <Code2 className='h-4 w-4' />
@@ -169,7 +169,7 @@ export default async function CaseStudyPage({
       </div>
 
       {next && (
-        <div className='section-white border-t border-blue-950/10 px-6 py-14'>
+        <div className='section-white border-t border-blue-950/10 px-6 py-14 dark:border-white/10'>
           <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
             <p className='text-sm text-neutral-500'>Next case study</p>
             <Link
